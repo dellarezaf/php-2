@@ -21,12 +21,16 @@
         */
 
         // Code function di sini
-
+        function greetings($nama) {
+          $nama_toUpper = ucfirst($nama);
+          echo "Halo $nama_toUpper, Selamat Datang di Sanbercode! <br>";
+        }
+        
 
         // Hapus komentar untuk menjalankan code!
-        // greetings("Bagas");
-        // greetings("Wahyu");
-        // greetings("Abdul");
+        greetings("Bagas");
+        greetings("Wahyu");
+        greetings("Abdul");
 
         echo "<br>";
         
@@ -44,12 +48,24 @@
         */
  
         // Code function di sini 
-
+        function reverseString($str){ 
+          for($i=strlen($str)-1, $j=0; $j<$i; $i--, $j++)  
+          { 
+              $temp = $str[$i]; 
+              $str[$i] = $str[$j]; 
+              $str[$j] = $temp; 
+          } 
+          echo "$str"; 
+        } 
+        
+      
 
         // Hapus komentar di bawah ini untuk jalankan Code
-        // reverseString("abduh");
-        // reverseString("Sanbercode");
-        // reverseString("We Are Sanbers Developers")
+        reverseString("abduh");
+        echo "<br>";
+        reverseString("Sanbercode");
+        echo "<br>";
+        reverseString("We Are Sanbers Developers");
         echo "<br>";
 
         echo "<h3>Soal No 3 Palindrome </h3>";
@@ -66,14 +82,21 @@
             NB: DILARANG menggunakan built-in function PHP seperti strrev() dll. Gunakan looping seperti biasa atau gunakan function reverseString dari jawaban no.2!
             
         */
+        function palindrome($str){
+          if(reverseString($str)==$str){
+            echo true;
+          } else {
+            echo false;
+          }
+        }
 
 
         // Code function di sini
         
         // Hapus komentar di bawah ini untuk jalankan code
-        // palindrome("civic") ; // true
-        // palindrome("nababan") ; // true
-        // palindrome("jambaban"); // false
+        palindrome("civic") ; // true
+        palindrome("nababan") ; // true
+        palindrome("jambaban"); // false
         // palindrome("racecar"); // true
     ?>
 </body>
