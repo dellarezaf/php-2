@@ -66,13 +66,12 @@
 
         $new_array = array();
         for($number=0;$number<count($numbers);$number++){
-          $result = $numbers[$number]%5;
-          $new_array[] = array_push($new_array,$result);
-          echo $new_array;
+          $new_array[] = $numbers[$number]%5;
         }
-
         echo "<br>";
-        echo $new_array; 
+        echo "Array sisa baginya adalah:  "; 
+        echo "<br>";
+        print_r($new_array);
         echo "<br>";
 
         echo "<h3> Soal No 3 Looping Asociative Array </h3>";
@@ -96,7 +95,15 @@
         ];
         
         // Output: 
-        
+        $new_array1 = array();
+        for($i=0;$i<count($items);$i++){
+            $new_array1[] = array("id" => $items[$i][0],
+            "name" => $items[$i][1],
+            "price" => $items[$i][2],
+            "description" => $items[$i][3],
+            "source" => $items[$i][4]);
+          }
+        print_r($new_array1);
         echo "<h3>Soal No 4 Asterix </h3>";
         /* 
             Soal No 4
@@ -109,9 +116,13 @@
             * * * * 
             * * * * *
         */
-        echo "Asterix: ";
-    
-        echo "<br>";        
+        echo "Asterix: <br>";
+        for($i=1;$i<=5;$i++){
+          echo str_repeat("*",$i);
+          echo "<br>"; 
+        }
+
+               
     ?>
 
 </body>
